@@ -1,5 +1,6 @@
 package org.example.booking.hotels.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel extends Accommodation {
@@ -10,8 +11,8 @@ public class Hotel extends Accommodation {
             int availableCheckOutDate, int totalRooms, int numberOfConfirmedRooms, List<Room> availableRooms, List<StayPackage> packages, List<Reservation> reservations) {
         super(type, name, city, description, rating, basePrice, 0, 0, availableCheckInDate,
                 availableCheckOutDate, totalRooms, 0, availableRooms, packages, null);
-    }
 
+    }
 
     @Override
     public List<StayPackage> getPackages() {
@@ -33,8 +34,8 @@ public class Hotel extends Accommodation {
         this.reservations = reservations;
     }
 
-    @Override
-    public String toString() {
+
+    public String details() {
         return "Hotel{" +
                 "type='" + type + '\'' +
                 ", city='" + city + '\'' +
@@ -84,4 +85,5 @@ public class Hotel extends Accommodation {
                 null
         );
     }
+
 }
