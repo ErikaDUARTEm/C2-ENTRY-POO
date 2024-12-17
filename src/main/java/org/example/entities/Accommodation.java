@@ -17,7 +17,20 @@ public abstract class Accommodation {
     protected int numberOfConfirmedRooms;
     protected List<Room> availableRooms;
 
-    public Accommodation(String type, String name, String city, String description, double rating, double basePrice, double totalPrice, int availableCheckInDate, int availableCheckOutDate, int totalRooms, int numberOfConfirmedRooms, List<Room> availableRooms) {
+    public Accommodation(
+            String type,
+            String name,
+            String city,
+            String description,
+            double rating,
+            double basePrice,
+            double totalPrice,
+            int availableCheckInDate,
+            int availableCheckOutDate,
+            int totalRooms,
+            int numberOfConfirmedRooms,
+            List<Room> availableRooms)
+    {
         this.type = type;
         this.name = name;
         this.city = city;
@@ -117,19 +130,19 @@ public abstract class Accommodation {
         this.totalPrice = totalPrice;
     }
 
-    public LocalDate getAvailableCheckInDate() {
+    public int getAvailableCheckInDate() {
         return availableCheckInDate;
     }
 
-    public void setAvailableCheckInDate(LocalDate availableCheckInDate) {
+    public void setAvailableCheckInDate(int availableCheckInDate) {
         this.availableCheckInDate = availableCheckInDate;
     }
 
-    public LocalDate getAvailableCheckOutDate() {
+    public int getAvailableCheckOutDate() {
         return availableCheckOutDate;
     }
 
-    public void setAvailableCheckOutDate(LocalDate availableCheckOutDate) {
+    public void setAvailableCheckOutDate(int availableCheckOutDate) {
         this.availableCheckOutDate = availableCheckOutDate;
     }
 
