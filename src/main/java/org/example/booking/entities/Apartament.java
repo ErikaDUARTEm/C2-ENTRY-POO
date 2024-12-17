@@ -1,12 +1,10 @@
 package org.example.booking.entities;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Hotel extends Accommodation {
+public class Apartament extends Accommodation{
 
-
-    public Hotel(
+    public Apartament(
             String type,
             String name,
             String city,
@@ -24,34 +22,36 @@ public class Hotel extends Accommodation {
 
     @Override
     public String viewAccommodation() {
-        String hotelDetails = String.format(
-                "************** Detalles del Hotel **********************%n" +
-                        "Nombre: %s, Ciudad: %s%n" +
-                        "Descripción: %s%n" +
-                        "Calificación: %.1f, Precio por noche: $%.2f%n" +
-                        "Disponible desde: %d hasta %d%n" +
-                        "Habitaciones disponibles: %d%n" +
-                        "Habitaciones: %d%n" +
-                        "Paquetes:%n",
-                this.getName(), this.getCity(), this.getDescription(),
-                this.getRating(), this.getBasePrice(),
-                this.getAvailableCheckInDate(), this.getAvailableCheckOutDate(),
-                this.getTotalRooms(), this.getAvailableRooms().size()
+        String apartamentDetails = String.format(
+                "************** Apartamentos disponibles **********************%n" +
+                        "Nombre: %s%n" +
+                        "Ciudad: %s%n" +
+                        "Calificación: %.1f%n" +
+                        "Precio por noche: $%.2f%n" +
+                        "Precio total: $%.2f%n" +
+                        "Detalles del apartamento: %d habitaciones disponibles%n" +
+                        "****************** Paquetes Disponibles ***********************%n",
+                this.getName(),
+                this.getCity(),
+                this.getRating(),
+                this.getBasePrice(),
+                this.getTotalPrice(),
+                this.getAvailableRooms().size()
         );
 
         for (StayPackage paquete : this.getPackages()) {
-            hotelDetails += String.format(
-                    " - %s: $%.2f, Descripción: %s%n",
+            apartamentDetails += String.format(
+                    " - %s: $%.2f%n   Descripción: %s%n",
                     paquete.getName(), paquete.getPrice(), paquete.getDescription()
             );
         }
 
-        hotelDetails += "****************************************************";
+        apartamentDetails += "**************************************************************";
 
-        return hotelDetails;
+        return apartamentDetails;
     }
 
-    public static Hotel createHotel(
+    public static Apartament createApartament(
             String name,
             String city,
             String description,
@@ -63,8 +63,8 @@ public class Hotel extends Accommodation {
             List<Room> rooms,
             List<StayPackage> packages
     ) {
-        return new Hotel(
-                "hotel",
+        return new Apartament(
+                "apartamento",
                 name,
                 city,
                 description,
@@ -77,5 +77,4 @@ public class Hotel extends Accommodation {
                 packages
         );
     }
-
 }

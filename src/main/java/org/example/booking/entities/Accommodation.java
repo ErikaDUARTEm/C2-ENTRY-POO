@@ -80,6 +80,7 @@ public abstract class Accommodation {
         this.packages = packages;
     }
 
+
     public void calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms) {
         this.totalPrice = PriceCalculation.calculateTotalPrice(basePrice, totalDays, numberOfConfirmedRooms);
     }
@@ -87,7 +88,7 @@ public abstract class Accommodation {
     public void adjustTotalPrice(int availableCheckInDate, int availableCheckOutDate, double totalPrice) {
         this.adjustmentPrice = PriceCalculation.calculatePriceAdjustment(availableCheckInDate, availableCheckOutDate, totalPrice);
     }
-    public abstract String viewHotel();
+    public abstract String viewAccommodation();
     public String getType() {
         return type;
     }
