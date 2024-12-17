@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55afe3f8-17b7-4eaf-a9e0-772d04c7f8e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/booking/entities/Accommodation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/booking/entities/Accommodation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/booking/entities/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/booking/entities/Hotel.java" afterDir="false" />
-    </list>
+    <list default="true" id="55afe3f8-17b7-4eaf-a9e0-772d04c7f8e8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +56,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Gradle.booking-hotels-poo [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "types-of-accommodation",
+    "git-widget-placeholder": "development",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/USER/OneDrive/Documentos/proyectos-erika/booking-hotels-poo",
     "project.structure.last.edited": "Modules",
