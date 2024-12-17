@@ -9,7 +9,7 @@ public class Hotel extends Accommodation {
             double rating, double basePrice, double totalPrice, double adjustmentPrice, int availableCheckInDate,
             int availableCheckOutDate, int totalRooms, int numberOfConfirmedRooms, List<Room> availableRooms, List<StayPackage> packages, List<Reservation> reservations) {
         super(type, name, city, description, rating, basePrice, 0, 0, availableCheckInDate,
-                availableCheckOutDate, totalRooms,0, availableRooms, packages, null);
+                availableCheckOutDate, totalRooms, 0, availableRooms, packages, null);
     }
 
 
@@ -52,5 +52,36 @@ public class Hotel extends Accommodation {
                 ", reservations=" + reservations +
                 ", packages=" + packages +
                 '}';
+    }
+
+    public static Hotel createHotel(
+            String name,
+            String city,
+            String description,
+            double rating,
+            double basePrice,
+            int availableCheckInDate,
+            int availableCheckOutDate,
+            int totalRooms,
+            List<Room> rooms,
+            List<StayPackage> packages
+    ) {
+        return new Hotel(
+                "hotel",
+                name,
+                city,
+                description,
+                rating,
+                basePrice,
+                0,
+                0,
+                availableCheckInDate,
+                availableCheckOutDate,
+                totalRooms,
+                0,
+                rooms,
+                packages,
+                null
+        );
     }
 }
