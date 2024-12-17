@@ -10,23 +10,56 @@ public abstract class Accommodation {
     protected String description;
     protected double rating;
     protected double basePrice;
-    protected LocalDate availableCheckInDate;
-    protected LocalDate availableCheckOutDate;
+    protected double totalPrice;
+    protected int availableCheckInDate;
+    protected int availableCheckOutDate;
     protected int totalRooms;
+    protected int numberOfConfirmedRooms;
     protected List<Room> availableRooms;
 
-    public Accommodation(String type, String name, String city, String description, double rating, double basePrice, LocalDate availableCheckInDate, LocalDate availableCheckOutDate, int totalRooms, List<Room> availableRooms) {
+    public Accommodation(String type, String name, String city, String description, double rating, double basePrice, double totalPrice, int availableCheckInDate, int availableCheckOutDate, int totalRooms, int numberOfConfirmedRooms, List<Room> availableRooms) {
         this.type = type;
         this.name = name;
         this.city = city;
         this.description = description;
         this.rating = rating;
         this.basePrice = basePrice;
+        this.totalPrice = totalPrice;
         this.availableCheckInDate = availableCheckInDate;
         this.availableCheckOutDate = availableCheckOutDate;
         this.totalRooms = totalRooms;
+        this.numberOfConfirmedRooms = numberOfConfirmedRooms;
         this.availableRooms = availableRooms;
     }
+
+    public Accommodation() {
+    }
+    public static double calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms){
+        return basePrice * totalDays * numberOfConfirmedRooms;
+    }
+    public static double calculatePriceAdjustment(int availableCheckInDate, int availableCheckOutDate, double totalPrice){
+        // últimos dos dígitos para el día de inicio
+        int start = availableCheckInDate % 100;
+        //  últimos dos dígitos para el día de fin
+        int end = availableCheckOutDate % 100;
+
+        double adjustment;
+        if (start >= 26) {
+            // Sube el precio 15%
+            adjustment = totalPrice * 1.15;
+        } else if (start >= 10 && end <= 15) {
+            // Sube el precio 10%
+            adjustment = totalPrice * 1.10;
+        } else if (start >= 5 && end <= 10) {
+            // Baja el precio 8%
+            adjustment = totalPrice * 0.92;
+        } else {
+            // Sin cambios si no aplica ninguna regla
+            adjustment = totalPrice;
+        }
+
+        return adjustment;
+    };
 
     public String getType() {
         return type;
@@ -74,6 +107,14 @@ public abstract class Accommodation {
 
     public void setBasePrice(double basePrice) {
         this.basePrice = basePrice;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public LocalDate getAvailableCheckInDate() {
