@@ -18,7 +18,7 @@ public abstract class Accommodation {
     protected List<Room> availableRooms;
     protected List<StayPackage> packages;
     protected List<Reservation> reservations;
-    protected List<Hotel> hotelList;
+
 
     public Accommodation(
             String type,
