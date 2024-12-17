@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.booking.hotels.entities;
 
 import java.util.List;
 
@@ -56,7 +56,11 @@ public abstract class Accommodation {
 
     }
 
-    private Accommodation() {
+
+    protected Accommodation() {
+    }
+
+    public Accommodation(String type, String name, String city, String description, double rating, double basePrice, int availableCheckInDate, int availableCheckOutDate, int totalRooms, List<Room> availableRooms, List<StayPackage> packages, List<Reservation> reservations) {
     }
 
     public void calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms) {

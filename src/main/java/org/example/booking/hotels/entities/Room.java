@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.booking.hotels.entities;
 
 public class Room {
    private String name;
@@ -15,7 +15,7 @@ public class Room {
         this.quantity = quantity;
     }
 
-    private Room() {
+    protected Room() {
     }
 
     public String getName() {

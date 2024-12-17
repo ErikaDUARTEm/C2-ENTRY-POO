@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.booking.hotels.entities;
 
 public class Usuario {
     protected String name;
@@ -6,18 +6,17 @@ public class Usuario {
     protected String email;
     protected String nationality;
     protected String phone;
-    protected String arrivalTime;
 
-    public Usuario(String name, String lastName, String email, String nationality, String phone, String arrivalTime) {
+    public Usuario(String name, String lastName, String email, String nationality, String phone) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.nationality = nationality;
         this.phone = phone;
-        this.arrivalTime = arrivalTime;
+
     }
 
-    private Usuario() {
+    protected Usuario() {
     }
 
     public String getName() {
@@ -60,11 +59,4 @@ public class Usuario {
         this.phone = phone;
     }
 
-    public String getArrivalTime() {
-        return arrivalTime;
-    }
-
-    public void setArrivalTime(String arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
 }

@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.booking.hotels.entities;
 
 public class StayPackage {
     private String name;

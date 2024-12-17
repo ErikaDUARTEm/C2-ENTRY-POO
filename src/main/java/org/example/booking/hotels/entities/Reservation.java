@@ -1,4 +1,4 @@
-package org.example.entities;
+package org.example.booking.hotels.entities;
 
 import java.time.LocalTime;
 
@@ -16,7 +16,7 @@ public class Reservation {
         this.hotel = hotel;
     }
 
-    private Reservation() {
+    protected Reservation() {
     }
 
     public Usuario getUsuario() {
