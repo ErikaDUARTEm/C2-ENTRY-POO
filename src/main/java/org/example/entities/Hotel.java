@@ -22,7 +22,7 @@ public class Hotel extends Accommodation {
         super(type, name, city, description, rating, basePrice, totalPrice, availableCheckInDate, availableCheckOutDate, totalRooms, numberOfConfirmedRooms, availableRooms);
         this.rooms = rooms;
     }
-
+    
     public List<Room> getRooms() {
         return rooms;
     }

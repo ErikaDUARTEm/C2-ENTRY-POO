@@ -16,6 +16,9 @@ public abstract class Accommodation {
     protected int totalRooms;
     protected int numberOfConfirmedRooms;
     protected List<Room> availableRooms;
+    protected List<StayPackages> packages;
+    protected List<Reservation> reservations;
+
 
     public Accommodation(
             String type,
@@ -30,7 +33,9 @@ public abstract class Accommodation {
             int availableCheckOutDate,
             int totalRooms,
             int numberOfConfirmedRooms,
-            List<Room> availableRooms)
+            List<Room> availableRooms,
+            List<StayPackages> packages,
+            List<Reservation> reservations)
 
     {
         this.type = type;
@@ -46,10 +51,12 @@ public abstract class Accommodation {
         this.totalRooms = totalRooms;
         this.numberOfConfirmedRooms = numberOfConfirmedRooms;
         this.availableRooms = availableRooms;
+        this.packages = packages;
+        this.reservations = reservations;
 
     }
 
-    public Accommodation() {
+    private Accommodation() {
     }
 
     public void calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms) {
@@ -145,6 +152,29 @@ public abstract class Accommodation {
 
     public void setAvailableRooms(List<Room> availableRooms) {
         this.availableRooms = availableRooms;
+    }
+    public double getAdjustmentPrice() {
+        return adjustmentPrice;
+    }
+
+    public void setAdjustmentPrice(double adjustmentPrice) {
+        this.adjustmentPrice = adjustmentPrice;
+    }
+
+    public List<StayPackages> getPackages() {
+        return packages;
+    }
+
+    public void setPackages(List<StayPackages> packages) {
+        this.packages = packages;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 }
 
