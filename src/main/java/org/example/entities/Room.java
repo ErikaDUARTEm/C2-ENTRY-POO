@@ -54,4 +54,15 @@ public class Room {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", maximumCapacity=" + maximumCapacity +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
