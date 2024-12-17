@@ -34,7 +34,7 @@ public class Hotel extends Accommodation {
     }
 
     @Override
-    public String toString() {
+    public String viewHotel() {
         return "Hotel{" +
                 "type='" + type + '\'' +
                 ", city='" + city + '\'' +

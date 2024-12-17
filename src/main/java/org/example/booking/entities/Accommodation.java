@@ -4,21 +4,21 @@ package org.example.booking.entities;
 import java.util.List;
 
 public abstract class Accommodation {
-    protected String type;
-    protected String name;
-    protected String city;
-    protected String description;
-    protected double rating;
-    protected double basePrice;
-    protected double totalPrice;
-    protected double adjustmentPrice;
-    protected int availableCheckInDate;
-    protected int availableCheckOutDate;
-    protected int totalRooms;
-    protected int numberOfConfirmedRooms;
-    protected List<Room> availableRooms;
-    protected List<StayPackage> packages;
-    protected List<Reservation> reservations;
+    private String type;
+    private String name;
+    private String city;
+    private String description;
+    private double rating;
+    private double basePrice;
+    private double totalPrice;
+    private double adjustmentPrice;
+    private int availableCheckInDate;
+    private int availableCheckOutDate;
+    private int totalRooms;
+    private int numberOfConfirmedRooms;
+    private List<Room> availableRooms;
+    private List<StayPackage> packages;
+    private List<Reservation> reservations;
 
 
     public Accommodation(
@@ -57,7 +57,6 @@ public abstract class Accommodation {
 
     }
 
-
     protected Accommodation() {
     }
 
@@ -71,6 +70,7 @@ public abstract class Accommodation {
     public void adjustTotalPrice(int availableCheckInDate, int availableCheckOutDate, double totalPrice) {
         this.adjustmentPrice = PriceCalculation.calculatePriceAdjustment(availableCheckInDate, availableCheckOutDate, totalPrice);
     }
+    public abstract String viewHotel();
     public String getType() {
         return type;
     }
