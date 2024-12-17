@@ -10,6 +10,7 @@ public abstract class Accommodation {
     protected double rating;
     protected double basePrice;
     protected double totalPrice;
+    protected double adjustmentPrice;
     protected int availableCheckInDate;
     protected int availableCheckOutDate;
     protected int totalRooms;
@@ -24,11 +25,13 @@ public abstract class Accommodation {
             double rating,
             double basePrice,
             double totalPrice,
+            double adjustmentPrice,
             int availableCheckInDate,
             int availableCheckOutDate,
             int totalRooms,
             int numberOfConfirmedRooms,
             List<Room> availableRooms)
+
     {
         this.type = type;
         this.name = name;
@@ -37,42 +40,25 @@ public abstract class Accommodation {
         this.rating = rating;
         this.basePrice = basePrice;
         this.totalPrice = totalPrice;
+        this.adjustmentPrice = adjustmentPrice;
         this.availableCheckInDate = availableCheckInDate;
         this.availableCheckOutDate = availableCheckOutDate;
         this.totalRooms = totalRooms;
         this.numberOfConfirmedRooms = numberOfConfirmedRooms;
         this.availableRooms = availableRooms;
+
     }
 
     public Accommodation() {
     }
-    public static double calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms){
-        return basePrice * totalDays * numberOfConfirmedRooms;
+
+    public void calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms) {
+        this.totalPrice = PriceCalculation.calculateTotalPrice(basePrice, totalDays, numberOfConfirmedRooms);
     }
-    public static double calculatePriceAdjustment(int availableCheckInDate, int availableCheckOutDate, double totalPrice){
-        // últimos dos dígitos para el día de inicio
-        int start = availableCheckInDate % 100;
-        //  últimos dos dígitos para el día de fin
-        int end = availableCheckOutDate % 100;
 
-        double adjustment;
-        if (start >= 26) {
-            // Sube el precio 15%
-            adjustment = totalPrice * 1.15;
-        } else if (start >= 10 && end <= 15) {
-            // Sube el precio 10%
-            adjustment = totalPrice * 1.10;
-        } else if (start >= 5 && end <= 10) {
-            // Baja el precio 8%
-            adjustment = totalPrice * 0.92;
-        } else {
-            // Sin cambios si no aplica ninguna regla
-            adjustment = totalPrice;
-        }
-
-        return adjustment;
-    };
-
+    public void adjustTotalPrice(int availableCheckInDate, int availableCheckOutDate, double totalPrice) {
+        this.adjustmentPrice = PriceCalculation.calculatePriceAdjustment(availableCheckInDate, availableCheckOutDate, totalPrice);
+    }
     public String getType() {
         return type;
     }
