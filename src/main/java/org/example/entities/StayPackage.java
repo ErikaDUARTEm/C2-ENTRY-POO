@@ -1,17 +1,17 @@
 package org.example.entities;
 
-public class StayPackages {
+public class StayPackage {
     private String name;
     private double price;
     private String description;
 
-    public StayPackages(String name, double price, String description) {
+    public StayPackage(String name, double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
     }
 
-    public StayPackages() {
+    public StayPackage() {
     }
 
     public String getName() {

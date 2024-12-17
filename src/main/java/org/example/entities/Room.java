@@ -15,6 +15,9 @@ public class Room {
         this.quantity = quantity;
     }
 
+    private Room() {
+    }
+
     public String getName() {
         return name;
     }

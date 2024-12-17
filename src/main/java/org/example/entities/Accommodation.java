@@ -16,7 +16,7 @@ public abstract class Accommodation {
     protected int totalRooms;
     protected int numberOfConfirmedRooms;
     protected List<Room> availableRooms;
-    protected List<StayPackages> packages;
+    protected List<StayPackage> packages;
     protected List<Reservation> reservations;
 
 
@@ -34,7 +34,7 @@ public abstract class Accommodation {
             int totalRooms,
             int numberOfConfirmedRooms,
             List<Room> availableRooms,
-            List<StayPackages> packages,
+            List<StayPackage> packages,
             List<Reservation> reservations)
 
     {
@@ -161,11 +161,11 @@ public abstract class Accommodation {
         this.adjustmentPrice = adjustmentPrice;
     }
 
-    public List<StayPackages> getPackages() {
+    public List<StayPackage> getPackages() {
         return packages;
     }
 
-    public void setPackages(List<StayPackages> packages) {
+    public void setPackages(List<StayPackage> packages) {
         this.packages = packages;
     }
 
