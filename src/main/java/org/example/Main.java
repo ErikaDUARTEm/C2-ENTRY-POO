@@ -13,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        HotelFactory factory = new HotelFactory();
 
         while (true) {
             viewMenu();
@@ -21,8 +22,12 @@ public class Main {
 
             switch (opcion) {
                 case 1 -> {
-                    List<Hotel> hoteles = HotelFactory.getHotels();
-                    hoteles.forEach(System.out::println);
+                    List<Hotel> hoteles = factory.getHotels();
+                    if (hoteles.isEmpty()) {
+                        System.out.println("No hay hoteles disponibles.");
+                    } else {
+                        hoteles.forEach(hotel -> System.out.println(hotel.viewHotel()));
+                    }
                 }
                 case 0 -> {
                     System.out.println("Saliendo...");

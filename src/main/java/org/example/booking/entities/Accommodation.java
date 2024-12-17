@@ -15,7 +15,6 @@ public abstract class Accommodation {
     private int availableCheckInDate;
     private int availableCheckOutDate;
     private int totalRooms;
-    private int numberOfConfirmedRooms;
     private List<Room> availableRooms;
     private List<StayPackage> packages;
     private List<Reservation> reservations;
@@ -33,7 +32,6 @@ public abstract class Accommodation {
             int availableCheckInDate,
             int availableCheckOutDate,
             int totalRooms,
-            int numberOfConfirmedRooms,
             List<Room> availableRooms,
             List<StayPackage> packages,
             List<Reservation> reservations)
@@ -50,17 +48,36 @@ public abstract class Accommodation {
         this.availableCheckInDate = availableCheckInDate;
         this.availableCheckOutDate = availableCheckOutDate;
         this.totalRooms = totalRooms;
-        this.numberOfConfirmedRooms = numberOfConfirmedRooms;
         this.availableRooms = availableRooms;
         this.packages = packages;
         this.reservations = reservations;
 
     }
 
-    protected Accommodation() {
-    }
-
-    public Accommodation(String type, String name, String city, String description, double rating, double basePrice, int availableCheckInDate, int availableCheckOutDate, int totalRooms, List<Room> availableRooms, List<StayPackage> packages, List<Reservation> reservations) {
+    protected Accommodation(
+            String type,
+            String name,
+            String city,
+            String description,
+            double rating,
+            double basePrice,
+            int availableCheckInDate,
+            int availableCheckOutDate,
+            int totalRooms,
+            List<Room> availableRooms,
+            List<StayPackage> packages)
+    {
+        this.type = type;
+        this.name = name;
+        this.city = city;
+        this.description = description;
+        this.rating = rating;
+        this.basePrice = basePrice;
+        this.availableCheckInDate = availableCheckInDate;
+        this.availableCheckOutDate = availableCheckOutDate;
+        this.totalRooms = totalRooms;
+        this.availableRooms = availableRooms;
+        this.packages = packages;
     }
 
     public void calculateTotalPrice(double basePrice, double totalDays, int numberOfConfirmedRooms) {

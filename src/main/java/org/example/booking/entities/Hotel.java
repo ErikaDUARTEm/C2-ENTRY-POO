@@ -1,56 +1,43 @@
 package org.example.booking.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel extends Accommodation {
 
+
     public Hotel(
-            String type, String name, String city, String description,
-            double rating, double basePrice, double totalPrice, double adjustmentPrice, int availableCheckInDate,
-            int availableCheckOutDate, int totalRooms, int numberOfConfirmedRooms, List<Room> availableRooms, List<StayPackage> packages, List<Reservation> reservations) {
-        super(type, name, city, description, rating, basePrice, 0, 0, availableCheckInDate,
-                availableCheckOutDate, totalRooms, 0, availableRooms, packages, null);
-    }
-
-
-    @Override
-    public List<StayPackage> getPackages() {
-        return packages;
-    }
-
-    @Override
-    public void setPackages(List<StayPackage> packages) {
-        this.packages = packages;
-    }
-
-    @Override
-    public List<Reservation> getReservations() {
-        return reservations;
-    }
-
-    @Override
-    public void setReservations(List<Reservation> reservations) {
-        this.reservations = reservations;
+            String type,
+            String name,
+            String city,
+            String description,
+            double rating,
+            double basePrice,
+            int availableCheckInDate,
+            int availableCheckOutDate,
+            int totalRooms,
+            List<Room> availableRooms,
+            List<StayPackage> packages) {
+        super(type, name, city, description, rating, basePrice, availableCheckInDate,
+                availableCheckOutDate, totalRooms, availableRooms, packages);
     }
 
     @Override
     public String viewHotel() {
         return "Hotel{" +
-                "type='" + type + '\'' +
-                ", city='" + city + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", rating=" + rating +
-                ", basePrice=" + basePrice +
-                ", totalPrice=" + totalPrice +
-                ", adjustmentPrice=" + adjustmentPrice +
-                ", availableCheckInDate=" + availableCheckInDate +
-                ", availableCheckOutDate=" + availableCheckOutDate +
-                ", totalRooms=" + totalRooms +
-                ", numberOfConfirmedRooms=" + numberOfConfirmedRooms +
-                ", availableRooms=" + availableRooms +
-                ", reservations=" + reservations +
-                ", packages=" + packages +
+                "type='" + getType() + '\'' +
+                ", city='" + getCity() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", description='" + getName() + '\'' +
+                ", rating=" + getRating() +
+                ", basePrice=" + getBasePrice() +
+                ", totalPrice=" + getTotalPrice() +
+                ", adjustmentPrice=" + getAdjustmentPrice() +
+                ", availableCheckInDate=" + getAvailableCheckInDate() +
+                ", availableCheckOutDate=" + getAvailableCheckOutDate() +
+                ", totalRooms=" + getTotalRooms() +
+                ", availableRooms=" + getAvailableRooms() +
+                ", packages=" + getPackages() +
                 '}';
     }
 
@@ -73,15 +60,12 @@ public class Hotel extends Accommodation {
                 description,
                 rating,
                 basePrice,
-                0,
-                0,
                 availableCheckInDate,
                 availableCheckOutDate,
                 totalRooms,
-                0,
                 rooms,
-                packages,
-                null
+                packages
         );
     }
+
 }
