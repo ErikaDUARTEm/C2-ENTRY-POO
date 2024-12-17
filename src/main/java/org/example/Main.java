@@ -1,8 +1,8 @@
 package org.example;
 
-import org.example.booking.hotels.entities.Hotel;
-import org.example.booking.hotels.entities.Room;
-import org.example.booking.hotels.entities.StayPackage;
+import org.example.booking.entities.Hotel;
+import org.example.booking.entities.Room;
+import org.example.booking.entities.StayPackage;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,5 @@
-package org.example.booking.hotels.entities;
+package org.example.booking.entities;
+
 
 import java.util.List;
 
