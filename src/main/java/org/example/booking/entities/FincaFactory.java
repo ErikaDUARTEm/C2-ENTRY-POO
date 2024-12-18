@@ -39,11 +39,11 @@ public class FincaFactory {
     }
     private List<Room> paradiseFarmRooms() {
         return List.of(
-                new Room("single room", "cama individual, baño privado, aire acondicionado",1, 45.0, 1),
-                new Room("double room", "2 camas dobles, aire acondicionado, baño privado, vista al jardín", 4, 75.0, 1 ),
-                new Room("quadruple room", "4 camas, baño privado, aire acondicionado, vista al campo", 4, 110.0, 2),
-                new Room("family room","4 camas matrimoniales, sala de estar, aire acondicionado, baño privado",  8, 130.0, 1),
-                new Room("matrimonial","cama matrimonial, baño privado, aire acondicionado",  2, 150.0, 1 )
+                new Room("single room", "cama individual, baño privado, aire acondicionado",1, 1, 0, 45.0, 1),
+                new Room("double room", "2 camas dobles, aire acondicionado, baño privado, vista al jardín", 4, 2, 2,75.0, 1 ),
+                new Room("quadruple room", "4 camas, baño privado, aire acondicionado, vista al campo", 4, 2, 2, 110.0, 2),
+                new Room("family room","4 camas matrimoniales, sala de estar, aire acondicionado, baño privado",  8, 4,4,130.0, 1),
+                new Room("matrimonial","cama matrimonial, baño privado, aire acondicionado",  2, 2, 0, 150.0, 1 )
         );
     };
 
@@ -51,7 +51,6 @@ public class FincaFactory {
         return List.of(
                 new StayPackage("Estadia por noche", 150.0, "Incluye barbacoa, Wifi, piscina y desayuno continental."),
                 new StayPackage("Estadia por fines de semana", 360.0, "Acceso completo a todas las instalaciones, desayuno buffet y zona de barbacoa."),
-                new StayPackage("Pasadía", 70.0, "Uso de piscina, barbacoa y zona de picnic.")
         );
         };
 

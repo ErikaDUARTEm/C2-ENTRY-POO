@@ -47,11 +47,11 @@ public class ApartamentFactory {
 
     private List<Room> createParkViewRooms() {
         return List.of(
-                new Room("Habitación principal", "cama doble, aire acondicionado, baño privado", 2, 100.0, 1),
-                new Room("Habitaciones secundarias", "camas individuales, aire acondicionado, baño compartido", 4, 80.0, 2),
-                new Room("Sala de estar", "sofa amplio, TV, acceso directo a la cocina", 0, 50.0, 1),
-                new Room("Cocina equipada", "utensilios básicos, horno, nevera", 0, 60.0, 1),
-                new Room("Area exterior", "terraza con vista al parque, zona de descanso al aire libre", 0, 40.0, 1)
+                new Room("Habitación principal", "cama doble, aire acondicionado, baño privado", 2, 2, 0, 100.0, 1),
+                new Room("Habitaciones secundarias", "camas individuales, aire acondicionado, baño compartido", 4, 1, 1, 80.0, 2),
+                new Room("Sala de estar", "sofa amplio, TV, acceso directo a la cocina", 0, 0, 0, 50.0, 1),
+                new Room("Cocina equipada", "utensilios básicos, horno, nevera", 0, 0, 0, 60.0, 1),
+                new Room("Area exterior", "terraza con vista al parque, zona de descanso al aire libre", 0, 0, 0, 40.0, 1)
         );
     }
 
@@ -80,11 +80,11 @@ public class ApartamentFactory {
 
     private List<Room> createVillaBridgeRooms() {
         return List.of(
-                new Room("Habitación principal", "cama matrimonial, aire acondicionado, baño privado", 2, 90.0, 1),
-                new Room("Habitaciones secundarias", "camas individuales, aire acondicionado, baño compartido", 4, 70.0, 2),
-                new Room("Sala de estar", "sofá amplio, TV, acceso a cocina equipada", 0, 50.0, 1),
-                new Room("Cocina equipada", "utensilios básicos, horno, nevera", 0, 60.0, 1),
-                new Room("Terraza", "vista al puente, zona de descanso al aire libre", 0, 40.0, 1)
+                new Room("Habitación principal", "cama matrimonial, aire acondicionado, baño privado", 2, 2, 0, 90.0, 1),
+                new Room("Habitaciones secundarias", "camas individuales, aire acondicionado, baño compartido", 2, 1, 1, 70.0, 2),
+                new Room("Sala de estar", "sofá amplio, TV, acceso a cocina equipada", 0, 0,0,50.0, 1),
+                new Room("Cocina equipada", "utensilios básicos, horno, nevera", 0, 0, 0, 60.0, 1),
+                new Room("Terraza", "vista al puente, zona de descanso al aire libre", 0, 0, 0, 40.0, 1)
         );
     }
 
@@ -114,11 +114,11 @@ public class ApartamentFactory {
 
     private List<Room> createSanGilNaturalRooms() {
         return List.of(
-                new Room("Habitación principal", "cama king size, aire acondicionado, baño privado", 2, 120.0, 1),
-                new Room("Habitaciones secundarias", "camas dobles, aire acondicionado, baño compartido", 4, 100.0, 2),
-                new Room("Sala de estar", "espaciosa con sofá, TV, acceso directo a la cocina", 0, 60.0, 1),
-                new Room("Cocina equipada", "utensilios completos, horno, nevera", 0, 70.0, 1),
-                new Room("Area exterior", "vista al río, zona de descanso al aire libre", 0, 50.0, 1)
+                new Room("Habitación principal", "cama king size, aire acondicionado, baño privado", 2, 2, 0, 120.0, 1),
+                new Room("Habitaciones secundarias", "camas dobles, aire acondicionado, baño compartido", 4, 2, 2, 100.0, 2),
+                new Room("Sala de estar", "espaciosa con sofá, TV, acceso directo a la cocina", 0, 0, 0, 60.0, 1),
+                new Room("Cocina equipada", "utensilios completos, horno, nevera", 0, 0,0,70.0, 1),
+                new Room("Area exterior", "vista al río, zona de descanso al aire libre", 0,0,0, 50.0, 1)
         );
     }
 

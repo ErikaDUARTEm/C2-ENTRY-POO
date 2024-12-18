@@ -92,6 +92,7 @@ public abstract class Accommodation {
     public String getType() {
         return type;
     }
+    public abstract List<Accommodation> searchAvailableAccommodations();
 
     public void setType(String type) {
         this.type = type;

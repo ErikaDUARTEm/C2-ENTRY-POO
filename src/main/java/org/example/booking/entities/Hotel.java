@@ -50,6 +50,16 @@ public class Hotel extends Accommodation {
 
         return hotelDetails;
     }
+    public List<Accommodation> searchAvailableAccommodations(
+            String city,
+            String type,
+            int availableCheckInDate,
+            int availableCheckOutDate,
+            int numberOfAdults,
+            int numberOfChildren,
+            int numberOfRooms){
+
+    };
 
     public static Hotel createHotel(
             String name,

@@ -72,11 +72,11 @@ public class HotelFactory {
     }
     private static List<Room> createCastilloRooms() {
         return List.of(
-                new Room("single room", "cama individual, aire acondicionado, baño privado", 1, 50.0, 5),
-                new Room("double room", "2 camas dobles, vista a la piscina, aire acondicionado, baño privado", 4, 80.0, 6),
-                new Room("quadruple room", "4 camas, vista al jardín, aire acondicionado, baño privado, minibar", 4, 100.0, 3),
-                new Room("family room", "4 camas matrimoniales, sala de estar, aire acondicionado, baño privado", 8, 120.0, 2),
-                new Room("suite", "cama king size, sala de estar, jacuzzi, aire acondicionado, baño privado", 2, 150.0, 2)
+                new Room("single room", "cama individual, aire acondicionado, baño privado", 1, 1, 0, 50.0, 5),
+                new Room("double room", "2 camas dobles, vista a la piscina, aire acondicionado, baño privado", 4, 2, 2, 80.0, 6),
+                new Room("quadruple room", "4 camas, vista al jardín, aire acondicionado, baño privado, minibar", 4, 2, 2, 100.0, 3),
+                new Room("family room", "4 camas matrimoniales, sala de estar, aire acondicionado, baño privado", 8, 4, 4, 120.0, 2),
+                new Room("suite", "cama king size, sala de estar, jacuzzi, aire acondicionado, baño privado", 2, 2, 0, 150.0, 2)
         );
     }
 
@@ -90,11 +90,11 @@ public class HotelFactory {
 
     private static List<Room> createMesonRooms() {
         return List.of(
-                new Room("single room", "cama individual, baño privado, aire acondicionado", 1, 60.0, 5),
-                new Room("double room", "2 camas dobles, vista al jardín, aire acondicionado, baño privado", 4, 100.0, 6),
-                new Room("quadruple room", "4 camas, aire acondicionado, baño privado, minibar", 4, 150.0, 3),
-                new Room("family room", "4 camas matrimoniales, sala de estar, aire acondicionado, baño privado", 8, 180.0, 2),
-                new Room("suite", "cama king size, sala de estar, jacuzzi, aire acondicionado, baño privado", 2, 200.0, 2)
+                new Room("single room", "cama individual, baño privado, aire acondicionado", 1, 1, 0, 60.0, 5),
+                new Room("double room", "2 camas dobles, vista al jardín, aire acondicionado, baño privado", 4, 2, 2, 100.0, 6),
+                new Room("quadruple room", "4 camas, aire acondicionado, baño privado, minibar", 4, 2, 2, 150.0, 3),
+                new Room("family room", "4 camas matrimoniales, sala de estar, aire acondicionado, baño privado", 8, 4, 4, 180.0, 2),
+                new Room("suite", "cama king size, sala de estar, jacuzzi, aire acondicionado, baño privado", 2, 2, 0, 200.0, 2)
         );
     }
 
@@ -107,8 +107,8 @@ public class HotelFactory {
     }
     private static List<Room> createPosadaRooms() {
         return List.of(
-                new Room("colonial room", "decoración colonial, cama queen size", 2, 80.0, 5),
-                new Room("suite colonial", "cama king size, balcón, baño con jacuzzi", 2, 150.0, 2)
+                new Room("colonial room", "decoración colonial, cama queen size", 2, 2, 0, 80.0, 5),
+                new Room("suite colonial", "cama king size, balcón, baño con jacuzzi", 2, 2, 1, 150.0, 2)
         );
     }
 
@@ -120,7 +120,7 @@ public class HotelFactory {
 
     private static List<Room> createCasonaRooms() {
         return List.of(
-                new Room("boutique suite", "cama king size, vista a la ciudad, desayuno incluido", 2, 120.0, 4)
+                new Room("boutique suite", "cama king size, vista a la ciudad, desayuno incluido", 2, 2, 0, 120.0, 4)
         );
     }
 
@@ -132,8 +132,8 @@ public class HotelFactory {
 
     private static List<Room> createVillaLeyvaRooms() {
         return List.of(
-                new Room("familiar room", "cama matrimonial + 2 camas sencillas", 4, 90.0, 6),
-                new Room("eco suite", "decoración ecológica, cama queen size, vista a la montaña", 2, 100.0, 3)
+                new Room("familiar room", "cama matrimonial + 2 camas sencillas", 4, 2, 2, 90.0, 6),
+                new Room("eco suite", "decoración ecológica, cama queen size, vista a la montaña", 2, 2, 1, 100.0, 3)
         );
     }
 
