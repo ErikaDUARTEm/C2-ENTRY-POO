@@ -50,7 +50,7 @@ public class FincaFactory {
     private List<StayPackage> paradiseFarmPackages() {
         return List.of(
                 new StayPackage("Estadia por noche", 150.0, "Incluye barbacoa, Wifi, piscina y desayuno continental."),
-                new StayPackage("Estadia por fines de semana", 360.0, "Acceso completo a todas las instalaciones, desayuno buffet y zona de barbacoa."),
+                new StayPackage("Estadia por fines de semana", 360.0, "Acceso completo a todas las instalaciones, desayuno buffet y zona de barbacoa.")
         );
         };
 

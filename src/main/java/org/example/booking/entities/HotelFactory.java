@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HotelFactory {
-    private List<Hotel> hotels = new ArrayList<>();
 
+    private List<Hotel> hotels = new ArrayList<>();
     public HotelFactory() {
         createCastilloResort();
         createMesonCuchicute();
@@ -21,7 +21,7 @@ public class HotelFactory {
         Hotel hotel = Hotel.createHotel(
                 name, city, description, rating, basePrice, availableCheckInDate, availableCheckOutDate,
                 totalRooms, availableRooms, packages);
-        addHotel(hotel);
+        hotel.setHotels(hotels);
         return hotel;
     }
 
@@ -67,9 +67,7 @@ public class HotelFactory {
                 18, createVillaLeyvaRooms(), createVillaLeyvaPackages()
         );
     }
-    public void addHotel(Hotel hotel) {
-        hotels.add(hotel);
-    }
+
     private static List<Room> createCastilloRooms() {
         return List.of(
                 new Room("single room", "cama individual, aire acondicionado, baño privado", 1, 1, 0, 50.0, 5),

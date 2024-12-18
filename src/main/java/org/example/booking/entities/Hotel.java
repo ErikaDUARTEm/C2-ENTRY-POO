@@ -50,7 +50,13 @@ public class Hotel extends Accommodation {
 
         return hotelDetails;
     }
-    public List<Accommodation> searchAvailableAccommodations(
+
+    @Override
+    public List<Accommodation> searchAvailableAccommodations() {
+        return List.of();
+    }
+
+    /** public List<Accommodation> searchAvailableAccommodations(
             String city,
             String type,
             int availableCheckInDate,
@@ -59,8 +65,12 @@ public class Hotel extends Accommodation {
             int numberOfChildren,
             int numberOfRooms){
 
-    };
+         availableRooms.stream()
+                .filter(room -> room.getAdultsCapacity() >= numberOfAdults && room.getChildrenCapacity() >= numberOfChildren)
+                .collect(Collectors.toList());
 
+    };
+**/
     public static Hotel createHotel(
             String name,
             String city,

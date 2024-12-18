@@ -1,6 +1,7 @@
 package org.example.booking.entities;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Accommodation {
@@ -15,6 +16,9 @@ public abstract class Accommodation {
     private int availableCheckInDate;
     private int availableCheckOutDate;
     private int totalRooms;
+    private List<Hotel> hotels = new ArrayList<>();
+    private List<Apartament> apartaments = new ArrayList<>();
+    private List<Finca> fincas = new ArrayList<>();
     private List<Room> availableRooms;
     private List<StayPackage> packages;
     private List<Reservation> reservations;
@@ -199,6 +203,30 @@ public abstract class Accommodation {
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
+    }
+
+    public List<Hotel> getHotels() {
+        return hotels;
+    }
+
+    public void setHotels(List<Hotel> hotels) {
+        this.hotels = hotels;
+    }
+
+    public List<Apartament> getApartaments() {
+        return apartaments;
+    }
+
+    public void setApartaments(List<Apartament> apartaments) {
+        this.apartaments = apartaments;
+    }
+
+    public List<Finca> getFincas() {
+        return fincas;
+    }
+
+    public void setFincas(List<Finca> fincas) {
+        this.fincas = fincas;
     }
 }
 

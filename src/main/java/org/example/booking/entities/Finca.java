@@ -15,7 +15,8 @@ public class Finca extends Accommodation{
             int availableCheckOutDate,
             int totalRooms,
             List<Room> availableRooms,
-            List<StayPackage> packages){
+            List<StayPackage> packages
+    ){
 
             super(type, name, city, description, rating, basePrice, availableCheckInDate,
                     availableCheckOutDate, totalRooms, availableRooms, packages);
@@ -51,6 +52,12 @@ public class Finca extends Accommodation{
 
         return fincaDetails;
     }
+
+    @Override
+    public List<Accommodation> searchAvailableAccommodations() {
+        return List.of();
+    }
+
     public static Finca createFinca(
             String name,
             String city,

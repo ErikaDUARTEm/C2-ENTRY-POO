@@ -51,6 +51,11 @@ public class Apartament extends Accommodation{
         return apartamentDetails;
     }
 
+    @Override
+    public List<Accommodation> searchAvailableAccommodations() {
+        return List.of();
+    }
+
     public static Apartament createApartament(
             String name,
             String city,
