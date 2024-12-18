@@ -12,6 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         HotelFactory hotelFactory = new HotelFactory();
         ApartamentFactory apartamentFactory = new ApartamentFactory();
+        FincaFactory fincaFactory = new FincaFactory();
 
         while (true) {
             viewMenu();
@@ -33,6 +34,14 @@ public class Main {
                         System.out.println("No hay apartamentos disponibles.");
                     } else {
                         apartaments.forEach(apartament -> System.out.println(apartament.viewAccommodation()));
+                    }
+                }
+                case 3->{
+                    List<Finca> fincas = fincaFactory.getFincas();
+                    if (fincas.isEmpty()) {
+                        System.out.println("No hay fincas disponibles.");
+                    } else {
+                        fincas.forEach(finca -> System.out.println(finca.viewAccommodation()));
                     }
                 }
                 case 0 -> {
